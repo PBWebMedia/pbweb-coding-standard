@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Pbweb">
+    <!-- Include the whole Symfony2 standard -->
+    <rule ref="Symfony2"/>
+
+    <rule ref="Pbweb.Formatting.SpacesConcatOperator"/>
+    <rule ref="Pbweb.Formatting.SpacesUnaryNotOperator"/>
+</ruleset>

@@ -1,16 +1,16 @@
 {
     "name": "pbweb/pbweb-coding-standard",
-    "keywords": ["phpcs", "Symfony 2", "coding standard"],
+    "keywords": ["phpcs", "Symfony", "coding standard", "code sniffer"],
     "type": "coding-standard",
-    "description": "Pbweb CodeSniffer ruleset",
-    "license": "Proprietary",
+    "description": "PB Web Media coding standard",
+    "license": "MIT",
     "require": {
         "squizlabs/php_codesniffer": "^2.8",
         "escapestudios/symfony2-coding-standard": "^2.9"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.1-dev"
         }
     }
 }

@@ -1,7 +1,18 @@
 <?xml version="1.0"?>
 <ruleset name="Pbweb">
     <!-- Include the whole Symfony2 standard -->
-    <rule ref="Symfony2"/>
+    <rule ref="Symfony2">
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
+
+        <exclude name="PSR2.Methods.FunctionCallSignature.SpaceAfterOpenBracket"/>
+        <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
+
+        <exclude name="Symfony2.Commenting.FunctionComment.Missing"/>
+        <exclude name="Symfony2.Functions.ScopeOrder.Invalid"/>
+
+        <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.NewlineBeforeOpenBrace"/>
+    </rule>
 
     <rule ref="Pbweb.Formatting.SpacesConcatOperator"/>
     <rule ref="Pbweb.Formatting.SpacesUnaryNotOperator"/>

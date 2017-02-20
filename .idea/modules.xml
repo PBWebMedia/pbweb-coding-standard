@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Pbweb.iml" filepath="$PROJECT_DIR$/.idea/Pbweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pbweb-coding-standard.iml" filepath="$PROJECT_DIR$/.idea/pbweb-coding-standard.iml" />
     </modules>
   </component>
 </project>

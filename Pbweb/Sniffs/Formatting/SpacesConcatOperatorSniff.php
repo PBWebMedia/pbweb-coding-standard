@@ -7,24 +7,21 @@
  */
 class Pbweb_Sniffs_Formatting_SpacesConcatOperatorSniff implements PHP_CodeSniffer_Sniff
 {
-    /**
-     * {@inheritDoc}
-     */
     public function register()
     {
-        return array(
+        return [
             T_STRING_CONCAT,
-        );
+        ];
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
 
-        if ($tokens[$stackPtr - 1]['code'] !== T_WHITESPACE || $tokens[$stackPtr + 1]['code'] !== T_WHITESPACE) {
+        $previous = $tokens[$stackPtr - 1]['code'];
+        $next = $tokens[$stackPtr + 1]['code'];
+
+        if ($previous !== T_WHITESPACE || $next !== T_WHITESPACE) {
             $error = 'A concatenation operator (.) must be surrounded by spaces';
             $phpcsFile->addError($error, $stackPtr);
 

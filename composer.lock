@@ -1,66 +1,79 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef7d6b82e0ce993f7a012750d0f491cf",
+    "content-hash": "00816ddb71ff9169d617324b0f97c419",
     "packages": [
         {
-            "name": "leaphub/phpcs-symfony2-standard",
-            "version": "v2.0.3",
-            "target-dir": "leaphub/phpcs/Symfony2",
+            "name": "escapestudios/symfony2-coding-standard",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/leaphub/phpcs-symfony2-standard.git",
-                "reference": "3a69d4c86585b474f434cc0422569f372038147c"
+                "url": "https://github.com/djoos/Symfony2-coding-standard.git",
+                "reference": "03bd93ece3dc004fd49e766bf546f8cf58c64cb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leaphub/phpcs-symfony2-standard/zipball/3a69d4c86585b474f434cc0422569f372038147c",
-                "reference": "3a69d4c86585b474f434cc0422569f372038147c",
+                "url": "https://api.github.com/repos/djoos/Symfony2-coding-standard/zipball/03bd93ece3dc004fd49e766bf546f8cf58c64cb8",
+                "reference": "03bd93ece3dc004fd49e766bf546f8cf58c64cb8",
                 "shasum": ""
             },
             "require": {
                 "squizlabs/php_codesniffer": "~2.0"
             },
-            "type": "library",
+            "type": "coding-standard",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "A PHP_CodeSniffer standard for Symfony 2 applications",
-            "homepage": "https://github.com/leaphub/phpcs-symfony2-standard",
+            "authors": [
+                {
+                    "name": "David Joos",
+                    "email": "david.joos@escapestudios.com"
+                },
+                {
+                    "name": "Community contributors",
+                    "homepage": "https://github.com/escapestudios/Symfony2-coding-standard/graphs/contributors"
+                }
+            ],
+            "description": "CodeSniffer ruleset for the Symfony2 coding standard",
+            "homepage": "https://github.com/escapestudios/Symfony2-coding-standard",
             "keywords": [
                 "Coding Standard",
-                "phpcs",
-                "symfony 2"
+                "Symfony2",
+                "phpcs"
             ],
-            "time": "2015-03-25 10:07:53"
+            "time": "2016-03-14T16:38:04+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.3.2",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "e96d8579fbed0c95ecf2a0501ec4f307a4aa6404"
+                "reference": "86dd55a522238211f9f3631e3361703578941d9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e96d8579fbed0c95ecf2a0501ec4f307a4aa6404",
-                "reference": "e96d8579fbed0c95ecf2a0501ec4f307a4aa6404",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/86dd55a522238211f9f3631e3361703578941d9a",
+                "reference": "86dd55a522238211f9f3631e3361703578941d9a",
                 "shasum": ""
             },
             "require": {
+                "ext-simplexml": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
                 "php": ">=5.1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
             },
             "bin": [
                 "scripts/phpcs",
@@ -69,7 +82,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -115,7 +128,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2015-04-28 23:28:20"
+            "time": "2017-02-02T03:30:00+00:00"
         }
     ],
     "packages-dev": [],

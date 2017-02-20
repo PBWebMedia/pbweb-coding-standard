@@ -23,7 +23,15 @@ class Pbweb_Sniffs_Formatting_SpacesUnaryNotOperatorSniff implements PHP_CodeSni
 
         if ($previous !== T_WHITESPACE || $next !== T_WHITESPACE) {
             $error = 'A unary not operator (!) must be surrounded by spaces';
-            $phpcsFile->addError($error, $stackPtr);
+            $fix = $phpcsFile->addFixableError($error, $stackPtr);
+            if ($fix === true) {
+                if ($previous !== T_WHITESPACE) {
+                    $phpcsFile->fixer->addContentBefore($stackPtr, ' ');
+                }
+                if ($next !== T_WHITESPACE) {
+                    $phpcsFile->fixer->addContent($stackPtr, ' ');
+                }
+            }
 
             return;
         }

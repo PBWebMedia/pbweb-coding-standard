@@ -1,17 +1,24 @@
 <?xml version="1.0"?>
 <ruleset name="Pbweb">
-    <!-- Include the whole Symfony2 standard -->
-    <rule ref="Symfony2">
+    <!-- Include the whole Symfony standard -->
+    <rule ref="Symfony">
         <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
 
         <exclude name="PSR2.Methods.FunctionCallSignature.SpaceAfterOpenBracket"/>
         <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
 
-        <exclude name="Symfony2.Commenting.FunctionComment.Missing"/>
-        <exclude name="Symfony2.Functions.ScopeOrder.Invalid"/>
+        <exclude name="Symfony.Commenting.Annotations"/>
+        <exclude name="Symfony.Commenting.FunctionComment.Missing"/>
+        <exclude name="Symfony.Commenting.License"/>
+        <exclude name="Symfony.ControlStructure.YodaConditions"/>
+        <exclude name="Symfony.Errors.ExceptionMessage"/>
+        <exclude name="Symfony.Functions.ScopeOrder.Invalid"/>
+        <exclude name="Symfony.Functions.Arguments"/>
 
         <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.NewlineBeforeOpenBrace"/>
+
+        <exclude name="Generic.Formatting.SpaceAfterNot"/>
     </rule>
 
     <rule ref="Pbweb.Formatting.SpacesConcatOperator"/>

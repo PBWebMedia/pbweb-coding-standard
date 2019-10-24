@@ -1,11 +1,14 @@
 <?php
 
+namespace Pbweb\Sniffs\Formatting;
+
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
+
 /**
- * Class SpacesUnaryNotOperatorSniff
- *
  * @copyright 2015 PB Web Media B.V.
  */
-class Pbweb_Sniffs_Formatting_SpacesUnaryNotOperatorSniff implements PHP_CodeSniffer_Sniff
+class SpacesUnaryNotOperatorSniff implements Sniff
 {
     public function register()
     {
@@ -14,7 +17,7 @@ class Pbweb_Sniffs_Formatting_SpacesUnaryNotOperatorSniff implements PHP_CodeSni
         ];
     }
 
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
 
@@ -23,7 +26,7 @@ class Pbweb_Sniffs_Formatting_SpacesUnaryNotOperatorSniff implements PHP_CodeSni
 
         if ($previous !== T_WHITESPACE || $next !== T_WHITESPACE) {
             $error = 'A unary not operator (!) must be surrounded by spaces';
-            $fix = $phpcsFile->addFixableError($error, $stackPtr);
+            $fix = $phpcsFile->addFixableError($error, $stackPtr, 'NoSpace');
             if ($fix === true) {
                 if ($previous !== T_WHITESPACE) {
                     $phpcsFile->fixer->addContentBefore($stackPtr, ' ');
